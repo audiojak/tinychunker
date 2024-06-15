@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  },
+  "dependencies": {
+    "llama3-tokenizer-js": "^1.1.3"
+  }
+}
