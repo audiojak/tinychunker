@@ -1141,35 +1141,35 @@ function getFilename(bundle, bundleType) {
   name = name.replace('/index.', '.').replace('/', '-');
   switch (bundleType) {
     case NODE_ES2015:
-      return \`${name}.js\`;
+      return \`\${name}.js\`;
     case BUN_DEV:
-      return \`${name}.development.js\`;
+      return \`\${name}.development.js\`;
     case BUN_PROD:
-      return \`${name}.production.js\`;
+      return \`\${name}.production.js\`;
     case ESM_DEV:
-      return \`${name}.development.js\`;
+      return \`\${name}.development.js\`;
     case ESM_PROD:
-      return \`${name}.production.js\`;
+      return \`\${name}.production.js\`;
     case NODE_DEV:
-      return \`${name}.development.js\`;
+      return \`\${name}.development.js\`;
     case NODE_PROD:
-      return \`${name}.production.js\`;
+      return \`\${name}.production.js\`;
     case NODE_PROFILING:
-      return \`${name}.profiling.js\`;
+      return \`\${name}.profiling.js\`;
     case FB_WWW_DEV:
     case RN_OSS_DEV:
     case RN_FB_DEV:
-      return \`${globalName}-dev.js\`;
+      return \`\${globalName}-dev.js\`;
     case FB_WWW_PROD:
     case RN_OSS_PROD:
     case RN_FB_PROD:
-      return \`${globalName}-prod.js\`;
+      return \`\${globalName}-prod.js\`;
     case FB_WWW_PROFILING:
     case RN_FB_PROFILING:
     case RN_OSS_PROFILING:
-      return \`${globalName}-profiling.js\`;
+      return \`\${globalName}-profiling.js\`;
     case BROWSER_SCRIPT:
-      return \`${name}.js\`;
+      return \`\${name}.js\`;
   }
 }
 
@@ -1345,7 +1345,7 @@ class Dayjs {
       ), this)
     }
     const { $W, $M, $D } = this
-    const utcPad = \`set${this.$u ? 'UTC' : ''}\`
+    const utcPad = \`set\${this.$u ? 'UTC' : ''}\`
     switch (unit) {
       case C.Y:
         return isStartOf ? instanceFactory(1, 0) :
@@ -1360,13 +1360,13 @@ class Dayjs {
       }
       case C.D:
       case C.DATE:
-        return instanceFactorySet(\`${utcPad}Hours\`, 0)
+        return instanceFactorySet(\`\${utcPad}Hours\`, 0)
       case C.H:
-        return instanceFactorySet(\`${utcPad}Minutes\`, 1)
+        return instanceFactorySet(\`\${utcPad}Minutes\`, 1)
       case C.MIN:
-        return instanceFactorySet(\`${utcPad}Seconds\`, 2)
+        return instanceFactorySet(\`\${utcPad}Seconds\`, 2)
       case C.S:
-        return instanceFactorySet(\`${utcPad}Milliseconds\`, 3)
+        return instanceFactorySet(\`\${utcPad}Milliseconds\`, 3)
       default:
         return this.clone()
     }
@@ -1378,16 +1378,16 @@ class Dayjs {
 
   $set(units, int) { // private set
     const unit = Utils.p(units)
-    const utcPad = \`set${this.$u ? 'UTC' : ''}\`
+    const utcPad = \`set\${this.$u ? 'UTC' : ''}\`
     const name = {
-      [C.D]: \`${utcPad}Date\`,
-      [C.DATE]: \`${utcPad}Date\`,
-      [C.M]: \`${utcPad}Month\`,
-      [C.Y]: \`${utcPad}FullYear\`,
-      [C.H]: \`${utcPad}Hours\`,
-      [C.MIN]: \`${utcPad}Minutes\`,
-      [C.S]: \`${utcPad}Seconds\`,
-      [C.MS]: \`${utcPad}Milliseconds\`
+      [C.D]: \`\${utcPad}Date\`,
+      [C.DATE]: \`\${utcPad}Date\`,
+      [C.M]: \`\${utcPad}Month\`,
+      [C.Y]: \`\${utcPad}FullYear\`,
+      [C.H]: \`\${utcPad}Hours\`,
+      [C.MIN]: \`\${utcPad}Minutes\`,
+      [C.S]: \`\${utcPad}Seconds\`,
+      [C.MS]: \`\${utcPad}Milliseconds\`
     }[unit]
     const arg = unit === C.D ? this.$D + (int - this.$W) : int
 
