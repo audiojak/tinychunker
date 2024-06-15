@@ -1,5 +1,15 @@
 {
+  "name": "tiny-chunker-js",
+  "version": "1.0.0",
+  "description": "Tiny Chunker is a code chunker for JavaScript that will divide code up into an array of chunks of an arbitrary size of tokens (maxSize)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha --require @babel/register"
+  },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/register": "^7.24.6",
     "mocha": "^10.4.0"
   },
   "dependencies": {
