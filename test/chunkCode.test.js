@@ -1,8 +1,8 @@
-import llama3Tokenizer from 'llama3-tokenizer-js'
+import llama3Tokenizer from 'llama3-tokenizer-js';
 import assert from 'assert';
 import { chunkCode } from '../src/chunkCode.js';
 import { DEFAULT_CHUNK_SIZE } from '../src/constants.js';
-import { exampleCodeString1 } from './exampleCodeString.js';
+import { exampleCodeString1 } from './exampleCodeStrings.js';
 
 // Test case
 describe('chunkCode', () => {

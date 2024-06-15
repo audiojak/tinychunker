@@ -1,6 +1,7 @@
 {
   "name": "tiny-chunker-js",
   "version": "1.0.0",
+  "type": "module",
   "description": "Tiny Chunker is a code chunker for JavaScript that will divide code up into an array of chunks of an arbitrary size of tokens (maxSize)",
   "main": "index.js",
   "scripts": {
